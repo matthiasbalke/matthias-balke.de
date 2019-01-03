@@ -1,26 +1,27 @@
 # Site settings
-title: Jekyll-Uno
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno'
+title: Matthias Balke
+description: 'Kitesurfer. Photographer. Developer.'
+url: 'https://www.matthias-balke.de'
+baseurl: ''
+cover: car_bg.jpg
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 
-author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
-  twitter_username: joshgerdes
-  facebook_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
+blog: false
+feed: false
 
-defaults:
-  -
-    scope:
-      path: ''
-      type: 'posts'
-    values:
-        layout: 'post'
+author:
+  name: 'Matthias Balke'
+  email: 
+  twitter_username: 3lt0n
+  facebook_username: 
+  github_username:  matthiasbalke
+  linkedin_username:  matthiasbalke
+  eyeem_username: matthiasbalke
+
+collections:
+  posts:
+    output: false
 
 # Build settings
 destination: _site

@@ -5,6 +5,7 @@
   <body>
     {% include header.html %}
 
+    {% if site.blog %}
     <div class="content-wrapper">
       <div class="content-wrapper__inner">
         {{ content }}
@@ -12,5 +13,6 @@
 
       {% include footer.html %}
     </div>
+    {% endif %}
   </body>
 </html>
