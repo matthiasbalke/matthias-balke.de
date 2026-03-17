@@ -26,7 +26,5 @@ jobs:
         ruby-version: '2.6'
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-    - run: gem install bundler:1.16.1
-
     - run: bundle exec jekyll
   
