@@ -27,4 +27,13 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - run: bundle exec jekyll build
-  
+
+    - name: Create artifact archive
+      run: tar -czf site.tar.gz _site/
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: jekyll-site
+        path: site.tar.gz
+        retention-days: 30
