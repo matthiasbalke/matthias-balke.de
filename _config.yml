@@ -4,7 +4,7 @@ description: 'Kitesurfer. Photographer. Developer.'
 url: 'https://www.matthias-balke.de'
 baseurl: ''
 cover: car_bg.jpg
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'G-K5T9QG8892'
 # disqus_shortname: 'your-disqus-name'
 
 blog: false
