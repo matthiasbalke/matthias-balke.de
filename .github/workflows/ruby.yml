@@ -1,0 +1,39 @@
+# This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
+# For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
+
+name: Ruby
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build-page:
+
+    runs-on: ubuntu-24.04
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.6'
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+    - run: bundle exec jekyll build
+
+    - name: Create artifact archive
+      run: tar -czf site.tar.gz _site/
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: jekyll-site
+        path: site.tar.gz
+        retention-days: 30
